@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>現代化科學計算機</title>
+    <title>沙特科學計算機</title>
     <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 引入 Google Fonts - Inter -->
@@ -83,8 +83,8 @@
 
             <!-- 第六行：小數點、0、括號與等於 -->
             <button onclick="appendNumber('.')" class="calc-btn bg-slate-700/50 hover:bg-slate-700 text-slate-300 border border-slate-600/50 py-3.5 rounded-xl font-semibold text-lg shadow-sm">.</button>
-            <button onclick="appendNumber('0')" class="calc-btn bg-slate-700/70 hover:bg-slate-700 text-white py-3.5 rounded-xl font-semibold text-lg shadow-sm">0</button>
             <button onclick="appendParentheses()" class="calc-btn bg-slate-700/50 hover:bg-slate-700 text-slate-300 border border-slate-600/50 py-3.5 rounded-xl font-semibold text-sm shadow-sm">( )</button>
+            <button onclick="appendNumber('0')" class="calc-btn bg-slate-700/70 hover:bg-slate-700 text-white py-3.5 rounded-xl font-semibold text-lg shadow-sm">0</button>
             <button onclick="calculateResult()" class="calc-btn bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white py-3.5 rounded-xl font-semibold text-lg shadow-lg shadow-purple-900/40">=</button>
         </div>
 
@@ -93,7 +93,7 @@
     <!-- 訊息提示對話框 (替代 alert) -->
     <div id="messageModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4 z-50">
         <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 max-w-sm w-full text-center shadow-2xl">
-            <h3 id="modalTitle" class="text-lg font-bold text-white mb-2">提示</h3>
+            <h3 id="modalTitle" class="text-lg font-bold text-white mb-2">⚠️提醒</h3>
             <p id="modalMessage" class="text-slate-300 text-sm mb-6"></p>
             <button onclick="closeModal()" class="w-full bg-purple-600 hover:bg-purple-500 text-white py-2.5 rounded-xl font-semibold transition">確定</button>
         </div>
@@ -237,7 +237,7 @@
                 updateDisplay();
 
             } catch (error) {
-                showMessage("計算錯誤", "請檢查您的表達式格式是否正確。");
+                showMessage("發生錯誤", "請檢查您的表達式格式是否正確。");
                 currentInput = '0';
                 updateDisplay();
             }
